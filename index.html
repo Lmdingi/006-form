@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HTML Forms</title>
+</head>
+
+<body>
+    <header>
+        <h1>Demo Form</h1>
+    </header>
+    <main>
+        <form action="user-data" method="post">
+            <section>
+                <h2>Personal Details</h2>
+                <ul>
+                    <li>
+                        <label for="username">Your Name</label>
+                        <input type="text" name="user-name" id="username" required placeholder="e.g Max">
+                    </li>
+
+                    <li>
+                        <label for="useremail">Your Email Address</label>
+                        <input type="email" name="user-email" id="useremail">
+                    </li>
+
+                    <li>
+                        <label for="userpassword">Your Password</label>
+                        <input type="password" name="user-password" id="userpassword" minlength="3">
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>More Details</h2>
+                <ul>
+                    <li>
+                        <label for="userage">Your Age</label>
+                        <input type="number" step="1" name="user-age" id="userage" min="18">
+                    </li>
+
+                    <li>
+                        <label for="userbirthdate">Your Birth Date</label>
+                        <input type="date" name="user-birthdate" id="userbirthdate" min="2010-01-19">
+                    </li>
+
+                    <li>
+                        <label for="fcolor">Favorite color?</label>
+                        <select name="fr-colors" id="fcolor">
+                            <option value="Blue">Blue</option>
+                            <option value="Black">Black</option>
+                            <option value="Red">Red</option>
+                        </select>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <label for="usermessage">Your message</label>
+                <textarea id="usermessage" rows="5"></textarea>
+            </section>
+
+            <section>
+                <h2>How should we verify your account?</h2>
+                <ul>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="message" value="text-message" required>
+                        <label for="message">Via Message</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="phone" value="phone-call" required>
+                        <label for="phone">Via Phone</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="radio" name="verify" id="email" value="email-message" required>
+                        <label for="email">Via Email</label>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <ul>
+                    <li class="form-control-inline">
+                        <input type="checkbox" name="verify" id="vcontact" value="email">
+                        <label for="vcontact">Contact via email</label>
+                    </li>
+                    <li class="form-control-inline">
+                        <input type="checkbox" name="verify" id="vphone" value="vphone">
+                        <label for="vphone">Contact via Phone</label>
+                    </li>
+                </ul>
+            </section>
+            <hr>
+            <section>
+                <div class="form-control-inline">
+                    <input type="checkbox" name="verify" id="agree-terms">
+                    <label for="agree-terms">Agree to terms</label>
+                </div>
+            </section>
+
+            <section>
+                <button type="submit">Submit</button>
+            </section>
+        </form>
+    </main>
+</body>
+
+</html>
